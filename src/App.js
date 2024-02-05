@@ -8,6 +8,7 @@ import { Profile } from "./pages/Profile";
 import { MsalProvider, useMsal, useIsAuthenticated } from "@azure/msal-react";
 import { InteractionRequiredAuthError } from "@azure/msal-browser";
 import { useEffect } from "react";
+import CreateUser from "./pages/createUser";
 
 
 function App({ msalInstance }) {
@@ -49,6 +50,7 @@ const Pages = () => {
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/createUser" element={<CreateUser />} />
         </Routes>
     );
 }
