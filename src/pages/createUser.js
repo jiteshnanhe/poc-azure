@@ -23,7 +23,7 @@ function CreateUser() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log({user});
-    axios.post('https://wsdcrud.azurewebsites.net/api/users', {...user, partition:'test'}).then(response => {
+    axios.post('https://wsdcrud.azurewebsites.net/api/users', {...user, partition:'test', id:user.sapid}).then(response => {
       console.log(response.data);
     })
   }
