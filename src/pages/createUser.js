@@ -23,7 +23,7 @@ function CreateUser() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log({user});
-    axios.get('https://wsdcrud.azurewebsites.net/api/items').then(response => {
+    axios.get('https://wsdcrud.azurewebsites.net/api/users').then(response => {
       console.log(response);
     })
   }
