@@ -6,7 +6,7 @@ function CreateUser() {
   const [user, setUser] = useState({
     name:'',
     email:'',
-    id:'',
+    sapid:'',
     designation:''
   })
 
@@ -24,7 +24,7 @@ function CreateUser() {
     e.preventDefault();
     console.log({user});
     axios.post('https://wsdcrud.azurewebsites.net/api/users', {...user, partition:'test'}).then(response => {
-      console.log(response);
+      console.log(response.data);
     })
   }
 
@@ -48,7 +48,7 @@ function CreateUser() {
             </div>
             <div>
               <label htmlFor='sap-id'><b>SAP ID</b></label>
-              <input type='text' id='sap-id' name='id' onChange={handleChange} required/>
+              <input type='text' id='sap-id' name='sapid' onChange={handleChange} required/>
             </div>
             <div>
               <label htmlFor='designation'><b>Designation</b></label>
